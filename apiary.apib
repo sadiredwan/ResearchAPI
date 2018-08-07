@@ -1,0 +1,52 @@
+FORMAT: 1A
+HOST: http://localhost:2000
+
+# ResearchAPI
+
+ReserarchAPI is an API for the Research Database of University of Rajshahi
+
+## Questions Collection [/questions]
+
+###[GET/api/departments]
+
++ Response 200 (application/json)
+
+[
+    {
+        "_id": "5b699e3dfb6fc0616243eb51",
+        "title": "Computer Science and Engineering",
+        "numberOfMembers": "22"
+    },
+    {
+        "_id": "5b699e7afb6fc0616243eb71",
+        "title": "Applied Physics and Electrical Engineering",
+        "numberOfMembers": "25"
+    },
+    {
+        "_id": "5b699eaffb6fc0616243eb7e",
+        "title": "Applied Chemistry and Chemical Engineering",
+        "numberOfMembers": "17"
+    },
+    {
+        "_id": "5b6a028c1309541778efb72f",
+        "title": "Biochemistry and Molecular Biology",
+        "numberOfMembers": "29"
+    }
+]
+
+###[POST/api/departments]
+
++ Request (application/json)
+
+{
+        "title": "Genetic Engineering and Biotechnology",
+        "numberOfMembers": "27"
+}
+
++ Response 201 (application/json)
+
+{
+    "title": "Genetic Engineering and Biotechnology",
+    "numberOfMembers": "27",
+    "_id": "5b6a147ba02aea03907edc75"
+}
