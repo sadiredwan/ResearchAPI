@@ -28,6 +28,7 @@ app.use('/api', departments);
 app.use('/api', members);
 app.use('/api', researches);
 
+
 app.listen(port, function(){
 	console.log('Server started on port ' +port);
 });
