@@ -36,7 +36,7 @@ router.post('/departments', function(req, res, next){
 		});
 	}
 	else{
-		db.tasks.save(department, function(err, department){
+		db.departments.save(department, function(err, department){
 			if(err){
 				res.send(err);
 			}
