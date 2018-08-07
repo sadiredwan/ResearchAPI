@@ -70,7 +70,7 @@ router.put('/members/:id', function(req, res, next){
 		upMem.department = member.department;
 	}
 
-	if(!upMem.name || !upMem.department){
+	if(!upMem.name && !upMem.department){
 		res.status(400);
 		res.json({
 			"error" : "Bad Data"
