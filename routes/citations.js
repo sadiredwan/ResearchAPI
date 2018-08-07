@@ -21,6 +21,7 @@ router.get('/citations/:id', function(req, res, next){
 		if(err){
 			res.send(err);
 		}
+		
 		res.json(citation);
 	});
 });
