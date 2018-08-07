@@ -89,6 +89,7 @@ router.delete('/citations/:id', function(req, res, next){
 		});
 	}
 
+    
 
 });*/
 
