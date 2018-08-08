@@ -32,6 +32,25 @@ app.use('/api', researches);
 app.use('/api', citations);
 app.use('/api', teachers);
 
+//URL error handling
+app.use((req, res, next)=>{
+
+    const error = new Error('Not found');
+    error.status = 404;
+    next(error);
+
+});
+
+app.use((error, req, res, next) => {
+
+    res.status(error.status || 500);
+    res.json({
+        error:{
+            message:error.message
+        }
+    });
+});
+
 app.listen(port, function(){
 	console.log('Server started on port ' +port);
 });
