@@ -3,7 +3,6 @@ var router =  express.Router();
 var mongojs = require('mongojs');
 var db = mongojs('mongodb://rakibhasan:rakibhasan1@ds113019.mlab.com:13019/research_database', ['members']);
 
-
 //Get all members
 router.get('/members', function(req, res, next){
 	db.members.find(function(err, members){
@@ -87,6 +86,5 @@ router.put('/members/:id', function(req, res, next){
 
 
 });
-
 
 module.exports = router;
